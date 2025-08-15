@@ -14,6 +14,7 @@ export default function NotesList({ notes, onOpen, onDelete }: Props) {
       {notes.map((n) => (
         <div
           key={n.id}
+          onClick={() => onOpen(n.id)}
           className="p-2 border rounded flex justify-between items-center"
         >
           <div>
@@ -25,13 +26,13 @@ export default function NotesList({ notes, onOpen, onDelete }: Props) {
           <div className="flex gap-2">
             <button
               onClick={() => onOpen(n.id)}
-              className="px-2 py-1 border rounded"
+              className="px-2 py-1 border rounded hover:cursor-pointer"
             >
               Open
             </button>
             <button
               onClick={() => onDelete(n.id)}
-              className="px-2 py-1 border rounded"
+              className="px-2 py-1 border rounded hover:cursor-pointer"
             >
               Del
             </button>
