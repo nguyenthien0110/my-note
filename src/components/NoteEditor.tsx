@@ -40,12 +40,6 @@ export default function NoteEditor({ note, onChange }: Props) {
         <button onClick={toggleBold} className="px-2 py-1 rounded border">
           B
         </button>
-        <button
-          onClick={() => window.print()}
-          className="px-2 py-1 rounded border"
-        >
-          In
-        </button>
       </div>
       <input
         value={note.title}
